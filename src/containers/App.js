@@ -2,9 +2,11 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import CardList from '../components/CardList';
 import SearchBox from '../components/SearchBox';
-import {robots} from '../robots';
+// import {robots} from '../robots';
 import Scroll from '../components/Scroll';
 import ErrorBoundry from '../components/ErrorBoundry';
+import Header from '../components/Header';
+
 import './App.css';
 
 import {setSearchField, requestRobots} from '../actions';
@@ -43,7 +45,7 @@ class App extends Component{
 		
 			(
 				<div className='tc'>
-					<h1 className="f1">We are Robots</h1>
+					<Header/>
 					<SearchBox searchChange={onSearchChange}/>
 					<Scroll>
 						<ErrorBoundry>
